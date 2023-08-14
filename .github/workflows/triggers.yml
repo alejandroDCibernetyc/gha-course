@@ -5,8 +5,8 @@ on:
       types: [opened, reopened]
     push:
       branches:
-        - 'aprendiendo-github-actions'
-        - 'main'
+        - aprendiendo-github-actions
+        - main
       paths:
         - '**.py'
     schedule:
