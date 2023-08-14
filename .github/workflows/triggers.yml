@@ -1,5 +1,5 @@
 name: Usando Triggers
-run-name: Ejecutando triggers en GHA
+run-name: ¡Ejecutando triggers en GHA!
 on:
     pull_request:
       types: [opened, reopened]
