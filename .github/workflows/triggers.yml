@@ -5,7 +5,8 @@ on:
       types: [opened, reopened]
     push:
       branches:
-        - 'aprendiendo-github-actions/**'
+        - 'aprendiendo-github-actions'
+        - 'main'
       paths:
         - '**.py'
     schedule:
@@ -18,4 +19,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Correr script
-        run: python hola.py
+        run: python3 hola.py
