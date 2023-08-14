@@ -10,7 +10,7 @@ on:
       paths:
         - '**.py'
     schedule:
-      - cron: '51 11,23 * * *'
+      - cron: '54 11,23 * * *'
     
 jobs:
   hola-triggers:
