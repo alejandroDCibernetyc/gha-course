@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Check variable
         if: ${{env.ejecutar == true}}
-        run: echo "Si es posible ejecutar" >> $GITHUB_ENV
+        run: echo "Si es posible ejecutar" 
         
