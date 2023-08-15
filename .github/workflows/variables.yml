@@ -1,0 +1,10 @@
+name: Usando variables
+run-name: Estoy aprendiendo variables
+on: [push]
+env:
+  nombre: 'Alejandro'
+jobs: 
+  check-variables:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Hola ----$nombre---"
