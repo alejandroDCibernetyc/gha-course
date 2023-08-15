@@ -1,0 +1,13 @@
+name: usando contextos
+run-name: ¡Usando variables de diferentes conextos!
+on: [push]
+env:
+  ejecutar: true
+jobs:
+  contexto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check variable
+        if: ${{env.ejecutar == true}}
+        run: echo "Si es posible ejecutar" 
+        

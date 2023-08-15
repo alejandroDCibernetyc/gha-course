@@ -1,0 +1,29 @@
+name: Aprendiendo expresiones
+run-name: ¡Estoy aprendiendo a usar expresiones!
+on:
+  workflow_dispatch:
+    inputs:
+      edad:
+        description: 'Edad'
+        required: true
+        type: integer
+      nombre:
+        description: 'Tu nombre'
+        required: true
+        default: 'Alejandro'
+        type: string
+      altura:
+        description: 'Tu altura'
+        required: true
+        default: '175'
+        type: integer
+jobs:
+  hola-mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Definir variable
+        run: echo "USERNAME=${{ inputs.nombre }}" >> $GITHUB_ENV
+      - name: Correr script
+        run: python3 hola.py

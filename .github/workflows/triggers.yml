@@ -1,0 +1,22 @@
+name: Usando Triggers
+run-name: ¡Ejecutando triggers en GHA!
+on:
+    pull_request:
+      types: [opened, reopened]
+    push:
+      branches:
+        - aprendiendo-github-actions
+        - main
+      paths:
+        - '**.py'
+    schedule:
+      - cron: '54 11,23 * * *'
+    
+jobs:
+  hola-triggers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Correr script
+        run: python3 hola.py
